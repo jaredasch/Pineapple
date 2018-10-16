@@ -5,5 +5,14 @@ P00 -- Da Art of Storytellin'(Part X)
 
 Devlog
 
+kyleT -- 2018-10-16 5:39
+This read tells us that no programming team is perfect, that a lot of times programmers create work that falls apart eventually. Coding is different for everybody because everyone has their own preferences when they code on their own. Programmers are forcing their brains to think in a way that it naturally does not, and this causes a lot of stress.
+
+Some things we can do in response to this:
+Optimize class time to code together
+Create a set of standards and try to adhere to them
+Create strong "snowflakes" rather than rushing and piling them in a mess (plan well ahead)
+
+
 angelaT -- 2018-10-15 12:01
 Created devlog.
