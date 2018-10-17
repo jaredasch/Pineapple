@@ -1,0 +1,17 @@
+<!--
+Team Pineapple
+Kyle Tau, Angela Tom, Muhammad Uddin, Kaitlin Wan
+-->
+
+{% extends "template.html" %}
+{% block title %} Not Logged In {% endblock %}
+
+{% block body %}
+Login:
+<form action="/login">
+  <input type="text"  name="username" value="user">
+  <input type="text"  name="password" value="pass">
+  <input type="submit" name="logout" value="Log Out">
+</form>
+
+{% endblock %}
