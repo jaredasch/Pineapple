@@ -1,19 +1,45 @@
-Pineapple -- Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
-SoftDev1 pd6
-P00 -- Da Art of Storytellin'(Part X)
-2018-10-15
+**Pineapple**
+Kyle Tau
+Angela Tom
+Muhammad Uddin
+Kaitlin Wan
+pd 6
+---------------------
+*Pinelogging* - our blog hosting website
 
-Devlog
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+kyleT -- 2018-10-17 
+--------------------------------------------------------------
+Began work on website, started creating base templates and database schema (tables).
+
+
 
 angelaT -- 2018-10-17 10:57
+--------------------------------------------------------------
 Added the new design.pdf
 
+
 kyleT -- 2018-10-17 10:14
+--------------------------------------------------------------
 The main change to our design plan will be the addition of a logout option
 
 
 kyleT -- 2018-10-16 5:39
-This read tells us that no programming team is perfect, that a lot of times programmers create work that falls apart eventually. Coding is different for everybody because everyone has their own preferences when they code on their own. Programmers are forcing their brains to think in a way that it naturally does not, and this causes a lot of stress.
+--------------------------------------------------------------
+This read tells us that no programming team is perfect, that a lot of times programmers create work that falls apart
+eventually. Coding is different for everybody because everyone has their own preferences when they code on their own.
+Programmers are forcing their brains to think in a way that it naturally does not, and this causes a lot of stress.
 
 Some things we can do in response to this:
 Optimize class time to code together
@@ -22,4 +48,7 @@ Create strong "snowflakes" rather than rushing and piling them in a mess (plan w
 
 
 angelaT -- 2018-10-15 12:01
+--------------------------------------------------------------
 Created devlog.
+
+==============================================================
