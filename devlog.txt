@@ -4,6 +4,9 @@ P00 -- Da Art of Storytellin'(Part X)
 2018-10-15
 
 Devlog
+kyleT -- 2018-10-17 10:14
+The main change to our design plan will be the addition of a logout option
+
 
 kyleT -- 2018-10-16 5:39
 This read tells us that no programming team is perfect, that a lot of times programmers create work that falls apart eventually. Coding is different for everybody because everyone has their own preferences when they code on their own. Programmers are forcing their brains to think in a way that it naturally does not, and this causes a lot of stress.
