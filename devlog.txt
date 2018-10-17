@@ -4,6 +4,10 @@ P00 -- Da Art of Storytellin'(Part X)
 2018-10-15
 
 Devlog
+
+angelaT -- 2018-10-17 10:57
+Added the new design.pdf
+
 kyleT -- 2018-10-17 10:14
 The main change to our design plan will be the addition of a logout option
 
