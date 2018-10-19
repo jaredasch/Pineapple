@@ -5,6 +5,10 @@
 
 import sqlite3
 
+DB_FILE = "database.db"
+db = sqlite3.connect(DB_FILE)
+c = db.cursor()
+
 def register(username, password):
     command = "SELECT user FROM accts"
     users = c.execute(command).fetchall()

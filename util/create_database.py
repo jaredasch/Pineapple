@@ -17,3 +17,6 @@ c.execute(command)
 
 command = "CREATE TABLE bentries(blog_id INTEGER PRIMARY KEY, blog_entry TEXT, blog_number INTEGER);"
 c.execute(command)
+
+db.commit()
+db.close()
