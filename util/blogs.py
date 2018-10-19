@@ -9,7 +9,7 @@ db = sqlite3.connect(DB_FILE)
 c = db.cursor()
 
 
-#def addEntry(String text):
+def addEntry(String text):
     
 
 db.commit()
