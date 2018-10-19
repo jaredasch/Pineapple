@@ -15,7 +15,7 @@ c.execute(command)
 command = "CREATE TABLE blogs(user TEXT, blog_name TEXT, blog_id INTEGER PRIMARY KEY);"
 c.execute(command)
 
-command = "CREATE TABLE bentries(blog_id INTEGER PRIMARY KEY, blog_entry TEXT, blog_number INTEGER);"
+command = "CREATE TABLE bentries(blog_id INTEGER PRIMARY KEY, entry_id INTEGER PRIMARY KEY, blog_entry TEXT);"
 c.execute(command)
 
 db.commit()
