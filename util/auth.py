@@ -9,6 +9,9 @@ DB_FILE = "database.db"
 db = sqlite3.connect(DB_FILE)
 c = db.cursor()
 
+USER = "123"
+PASS = "123"
+
 def register(username, password):
     command = "SELECT user FROM accts"
     users = c.execute(command).fetchall()
@@ -29,13 +32,20 @@ def login(username, password):
     if user in login.keys():
         if password == login[user]:
             return 1
-        else: 
+        else:
             return 0
     return 0
+
+##THIS IS JUST FOR KAITLIN FOR EZ TESTING
+def checkInfo(user,pswd):
+    if(user == USER and pswd == PASS):
+        return "Login Successful"
+    elif(user != USER):
+        return "ERROR: Invalid Username"
+    else:
+        return "ERROR: Invalid Password"
+
 
 
 db.commit()
 db.close()
-
-
-

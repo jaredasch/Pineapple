@@ -5,13 +5,41 @@
 
 from flask import Flask,request,render_template,session,url_for,redirect,flash
 import os
+from util import auth,blogs,entries
 
 app = Flask(__name__)
 # Set the secret key to some random bytes. Keep this really secret!
-#app.secret_key = open("secret.txt","r").read()
+app.secret_key = "supersecretkey"
 
 @app.route("/")
-def register():
+def home():
+
+    if 'user' in session: #ALREADY LOGGED IN NEVER LOGGED OUT
+        print("user in ses")
+        return redirect("dash.html")
+
+    if not("user" in request.args): #NOT LOGGED IN NEW USER FIRST TIME
+        return render_template("landing.html")
+
+    login = auth.login(request.args['user'],request.args['pass'])
+    print(login)
+    if login == 0: #Page with error msg
+        return render_template("template.html", loginStatus = "unsucessful")
+    else:
+        session['user'] = request.args["user"]
+        return redirect('/landing.html')
+    return render_template("landing.html")
+
+
+
+@app.route("/login")
+def login():
+    que = request.args
+    print(que)
+    return render_template("dash.html")
+
+@app.route("/register")
+def reg():
     return render_template("landing.html")
 
 if __name__ == '__main__':
