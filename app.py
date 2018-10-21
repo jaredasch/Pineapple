@@ -5,5 +5,9 @@
 
 from flask import Flask,request,render_template,session,url_for,redirect,flash
 
+# Set the secret key to some random bytes. Keep this really secret!
+app.secret_key = open("secret.txt","r").read()
+
 @app.route("/")
 def register():
+    

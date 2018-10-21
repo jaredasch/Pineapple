@@ -7,11 +7,18 @@ Kyle Tau, Angela Tom, Muhammad Uddin, Kaitlin Wan
 {% block title %} Not Logged In {% endblock %}
 
 {% block body %}
-Login:
+<h4>Login:</h4>
 <form action="/login">
-  <input type="text"  name="username" value="user">
-  <input type="text"  name="password" value="pass">
-  <input type="submit" name="logout" value="Log Out">
+  <input type="text"  name="user" placeholder="username">
+  <input type="text"  name="pass" placeholder="password">
+  <input type="submit" name="auth" value="Log In">
+</form>
+<br>
+<h4>Register:</h4>
+<form action="/logout">
+  <input type="text"  name="user" placeholder="username">
+  <input type="text"  name="pass" placeholder="password">
+  <input type="submit" name="regi" value="Register">
 </form>
 
 {% endblock %}
