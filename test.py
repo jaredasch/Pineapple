@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 # Set the secret key to some random bytes. Keep this really secret!
-
+app.secret_key = "supersecretkey123"
 
 @app.route('/')
 def home():

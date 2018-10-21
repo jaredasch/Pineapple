@@ -1,11 +1,11 @@
-**Pineapple**
+Pineapple
 Kyle Tau
 Angela Tom
 Muhammad Uddin
 Kaitlin Wan
 pd 6
 ---------------------
-*Pinelogging* - our blog hosting website
+Pinelogging - our blog hosting website
 
 
  ______   ______   __   __   __       ______   _______     
@@ -18,11 +18,24 @@ pd 6
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+kyleT -- 2018-10-18 12:29
+--------------------------------------------------------------
+Team continued on project, still have not worked on adding/editing blog entries. Good progress!
 
-kyleT -- 2018-10-17 
+
+mohammedU, angelaT -- 2018-10-18 12:25
+--------------------------------------------------------------
+Wrote register + login methods that add accounts and retrieve account information from database
+
+
+kaitlinW -- 2018-10-17 12:30
+--------------------------------------------------------------
+Created templates for websites + created blocks for easier usage!
+
+
+kyleT -- 2018-10-17 12:30
 --------------------------------------------------------------
 Began work on website, started creating base templates and database schema (tables).
-
 
 
 angelaT -- 2018-10-17 10:57
@@ -35,12 +48,16 @@ kyleT -- 2018-10-17 10:14
 The main change to our design plan will be the addition of a logout option
 
 
+kaitlinW -- 2018-10-16 20:00
+--------------------------------------------------------------
+created sitemaps + connection + website designs
+
+
 kyleT -- 2018-10-16 5:39
 --------------------------------------------------------------
 This read tells us that no programming team is perfect, that a lot of times programmers create work that falls apart
 eventually. Coding is different for everybody because everyone has their own preferences when they code on their own.
 Programmers are forcing their brains to think in a way that it naturally does not, and this causes a lot of stress.
-
 Some things we can do in response to this:
 Optimize class time to code together
 Create a set of standards and try to adhere to them

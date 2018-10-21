@@ -9,15 +9,6 @@ DB_FILE = "database.db"
 db = sqlite3.connect(DB_FILE)
 c = db.cursor()
 
-command = "(CREATE TABLE accts(user TEXT PRIMARY KEY, password TEXT);"
-c.execute(command)
-
-command = "(CREATE TABLE blogs(user TEXT, blog_name TEXT, blog_id INTEGER PRIMARY KEY);"
-c.execute(command)
-
-command = "(CREATE TABLE bentries(blog_id INTEGER PRIMARY KEY, blog_entry TEXT, order INTEGER);"
-c.execute(command)
-
 def register(username, password):
     command = "SELECT user FROM accts"
     users = c.execute(command).fetchall()
@@ -31,3 +22,20 @@ def register(username, password):
 
 def login(username, password):
     command = "SELECT user, password FROM accts"
+    accts = c.execute(command).fetchall()
+    login = {}
+    for acct in accts:
+        login[acct[0]] = acct[1]
+    if user in login.keys():
+        if password == login[user]:
+            return 1
+        else: 
+            return 0
+    return 0
+
+
+db.commit()
+db.close()
+
+
+
