@@ -36,6 +36,10 @@ def login(username, password):
             return 0
     return 0
 
+register("Bob", "pass")
+register("James", "hello")
+
+
 ##THIS IS JUST FOR KAITLIN FOR EZ TESTING
 def checkInfo(user,pswd):
     if(user == USER and pswd == PASS):
