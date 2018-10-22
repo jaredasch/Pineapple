@@ -5,7 +5,7 @@
 
 from flask import Flask,request,render_template,session,url_for,redirect,flash
 import os
-from util import auth,blogs,entries
+from util import auth,entries
 
 app = Flask(__name__)
 # Set the secret key to some random bytes. Keep this really secret!
@@ -40,6 +40,8 @@ def login():
 
 @app.route("/register")
 def reg():
+    que = request.args
+    auth.register(que['user'],que['pass'])
     return render_template("landing.html")
 
 if __name__ == '__main__':
