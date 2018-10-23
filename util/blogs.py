@@ -10,6 +10,10 @@ db = sqlite3.connect(DB_FILE)
 c = db.cursor()
 
 def addBlog(username, title, url):
+    ''' 
+    Add a new blog into the database with the params: username, title, and url.
+    The blog id is unique and a number.
+    ''' 
     maxID = c.execute("SELECT MAX(blog_id) FROM blogs").fetchone()
     blogs = c.execute("SELECT blog_id FROM blogs").fetchall()
     if len(blogs) == 0:
@@ -20,13 +24,18 @@ def addBlog(username, title, url):
     command = "INSERT INTO blogs VALUES(?,?,?,?)"
     c.execute(command, params)
 
-
 def delBlog(id):
+    '''
+    Delete a blog from the database with the blog id as param.
+    '''
     command = "DELETE FROM blogs WHERE blog_id == ?"
     params = (id)
     c.execute(command, (id,))
 
 def searchBlog(title):
+    '''
+    A list of urls would be returned based on the title.
+    '''
     search_results = []
     command = "SELECT blog_name FROM blogs"
     titles = c.execute(command).fetchall()
@@ -36,7 +45,6 @@ def searchBlog(title):
         if titles[x][0] == title:
             search_results += urls[x]
     return search_results
-
 
 addBlog("AT", "Blog", "blog.html")
 addBlog("Bob", "Badalog", "bob.html")

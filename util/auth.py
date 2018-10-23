@@ -13,6 +13,11 @@ USER = "123"
 PASS = "123"
 
 def register(username, password):
+    '''
+    Adds the user and password into the database if it does not already exist
+    Returns 0 if username already exists
+    Returns 1 if successful
+    '''
     command = "SELECT user FROM accts"
     users = c.execute(command).fetchall()
     if username in users:
@@ -24,6 +29,10 @@ def register(username, password):
     return 1
 
 def login(username, password):
+    '''
+    Returns 0 if login failed
+    Returns 1 if login is successful
+    '''
     command = "SELECT user, password FROM accts"
     accts = c.execute(command).fetchall()
     login = {}

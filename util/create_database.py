@@ -9,6 +9,10 @@ DB_FILE = "database.db"
 db = sqlite3.connect(DB_FILE)
 c = db.cursor()
 
+'''
+Creating the database tables: accts, blogs, and bentries.
+'''
+
 command = "CREATE TABLE accts(user TEXT PRIMARY KEY, password TEXT);"
 c.execute(command)
 
