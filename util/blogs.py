@@ -25,17 +25,18 @@ def delBlog(id):
     command = "DELETE FROM blogs WHERE blog_id == ?"
     params = (id)
     c.execute(command, (id,))
-'''
+
 def searchBlog(title):
     search_results = []
-    command = "SELECT title FROM blogs"
+    command = "SELECT blog_name FROM blogs"
     titles = c.execute(command).fetchall()
-    command = "SELECT user FROM blogs"
-    users = c.execute(command).fetchall()
+    command = "SELECT blog_url FROM blogs"
+    urls = c.execute(command).fetchall()
     for x in range(len(titles)):
-        if titles[x] == titles:
-            search_results = 
-'''
+        if titles[x][0] == title:
+            search_results += urls[x]
+    return search_results
+
 
 addBlog("AT", "Blog", "blog.html")
 addBlog("Bob", "Badalog", "bob.html")
@@ -44,7 +45,7 @@ delBlog(1)
 addBlog("Boosda", "dfwaoef", "boo.html")
 addBlog("AT", "Hunger Games", "hungergames1.html")
 addBlog("Stuff", "Hunger Games", "hungergames2.html")
-#print(searchBlog("Hunger Games"))
+print(searchBlog("Hunger Games"))
 
 db.commit()
 db.close()
