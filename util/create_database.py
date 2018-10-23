@@ -12,7 +12,7 @@ c = db.cursor()
 command = "CREATE TABLE accts(user TEXT PRIMARY KEY, password TEXT);"
 c.execute(command)
 
-command = "CREATE TABLE blogs(user TEXT, blog_name TEXT, blog_id INTEGER PRIMARY KEY);"
+command = "CREATE TABLE blogs(user TEXT, blog_name TEXT, blog_id INTEGER PRIMARY KEY, blog_url TEXT);"
 c.execute(command)
 
 command = "CREATE TABLE bentries(blog_id INTEGER, entry_id INTEGER PRIMARY KEY, blog_entry TEXT);"

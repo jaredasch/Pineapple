@@ -9,15 +9,15 @@ DB_FILE = "database.db"
 db = sqlite3.connect(DB_FILE)
 c = db.cursor()
 
-def addBlog(username, title):
+def addBlog(username, title, url):
     maxID = c.execute("SELECT MAX(blog_id) FROM blogs").fetchone()
     blogs = c.execute("SELECT blog_id FROM blogs").fetchall()
     if len(blogs) == 0:
         blogid = 0
     else:
         blogid = maxID[0] + 1
-    params = (username, title, blogid)
-    command = "INSERT INTO blogs VALUES(?,?,?)"
+    params = (username, title, blogid, url)
+    command = "INSERT INTO blogs VALUES(?,?,?,?)"
     c.execute(command, params)
 
 
@@ -25,15 +25,26 @@ def delBlog(id):
     command = "DELETE FROM blogs WHERE blog_id == ?"
     params = (id)
     c.execute(command, (id,))
-
+'''
 def searchBlog(title):
-    command = "SELECT ?"
+    search_results = []
+    command = "SELECT title FROM blogs"
+    titles = c.execute(command).fetchall()
+    command = "SELECT user FROM blogs"
+    users = c.execute(command).fetchall()
+    for x in range(len(titles)):
+        if titles[x] == titles:
+            search_results = 
+'''
 
-addBlog("AT", "Blog")
-addBlog("Bob", "Badalog")
-addBlog("Bobsad", "Bsdasadalog")
+addBlog("AT", "Blog", "blog.html")
+addBlog("Bob", "Badalog", "bob.html")
+addBlog("Bobsad", "Bsdasadalog", "bobsad.html")
 delBlog(1)
-addBlog("Boosda", "dfwaoef")
+addBlog("Boosda", "dfwaoef", "boo.html")
+addBlog("AT", "Hunger Games", "hungergames1.html")
+addBlog("Stuff", "Hunger Games", "hungergames2.html")
+#print(searchBlog("Hunger Games"))
 
 db.commit()
 db.close()
