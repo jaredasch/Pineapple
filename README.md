@@ -2,11 +2,11 @@
 *This application was made in accordance with python3*
 
 ## Launch Instructions:
-1. Clone this repo!
+1. Clone this repo! 
 ```
 git clone <HTTPS or SSH link of this repo>
 ```
-2. Download flask! (In your virtual environment)
+2. Download flask! (In your virtual environment; You will also need sudo access on your localhost)
 ```
 (venv) $ pip3 install flask
 ```
