@@ -12,10 +12,13 @@ c = db.cursor()
 
 
 def addEntry(blog_id, text):
-    id  = genId();
-    while id in entry_id:
-        id =
-    params = (blog_id, text,)
+    maxID = c.execute("SELECT MAX(entry_id) FROM bentries").fetchone()
+    entries = c.execute("SELECT entry_id FROM bentries").fetchall()
+    if len(entries) == 0:
+        entry_id = 0
+    else:
+        entry_id = maxID[0] + 1
+    params = (blog_id, entry_id, text)
     command = "INSERT INTO bentries VALUES(?,?,?)"
     c.execute(command, params)
 
@@ -24,26 +27,14 @@ def removeEntry(entry_id):
     c.execute(command, (entry_id,))
 
 def viewEntry(entry_id):
-    command = "SELECT text"
+    command = "SELECT blog_entry FROM bentries WHERE entry_id == ?"
+    text = c.execute(command, (entry_id,)).fetchone()
+    return text[0]
 
-def editEntry(entry_id):
-    command = ""
-
-def genId():
-    command = "SELECT entry_id FROM bentries"
-    ids = c.execute(command).fetchall()
-    id = randint(0,999999999)
-#idk above and below this point
-
-def makeGood(id):
-    bad = False
-    for row in ids:
-        if id == row[0]:
-            bad = True
-            break
-    if bad:
-
-    return id
+def editEntry(entry_id, text):
+    command = "UPDATE bentries SET blog_entry = ? WHERE entry_id == ?"
+    params = (text, entry_id)
+    c.execute(command, params)
 
 
 db.commit()
