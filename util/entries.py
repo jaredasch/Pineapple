@@ -4,7 +4,6 @@
 #2018-10-15
 
 import sqlite3
-from random import randint
 
 DB_FILE = "database.db"
 db = sqlite3.connect(DB_FILE)
@@ -23,9 +22,6 @@ def addEntry(blog_id, text):
     c.execute(command, params)
 
 def removeEntry(entry_id):
-    '''
-
-    '''
     command = "DELETE FROM bentries WHERE entry_id == ?"
     c.execute(command, (entry_id,))
 
@@ -39,6 +35,10 @@ def editEntry(entry_id, text):
     params = (text, entry_id)
     c.execute(command, params)
 
+def getBlog(entry_id):
+    command = "SELECT blog_id FROM bentries WHERE entry_id == ?"
+    blog = c.execute(command, (entry_id,)).fetchone()
+    return blog[0]
 
 db.commit()
 db.close()

@@ -44,6 +44,13 @@ def reg():
     auth.register(que['user'],que['pass'])
     return render_template("landing.html")
 
+@app.route("/display_entry")
+def display_entry():
+    que = request.args
+    text = entries.viewEntry(que['entry_id'])
+    return render_template("entry.html", entry_text=text)
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
