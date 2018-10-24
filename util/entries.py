@@ -7,7 +7,7 @@ import sqlite3
 from random import randint
 
 DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE)
+db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 
 
@@ -41,4 +41,3 @@ def editEntry(entry_id, text):
 
 
 db.commit()
-db.close()
