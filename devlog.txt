@@ -18,6 +18,10 @@ Pinelogging - our blog hosting website
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+angelaT -- 2018-10-23 8:21
+--------------------------------------------------------------
+Finished blog adding/deleting/searching. 
+
 kyleT -- 2018-10-23 12:40
 --------------------------------------------------------------
 Main bug: register and login are not complying with hmtl templates
