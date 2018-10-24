@@ -23,6 +23,9 @@ def addEntry(blog_id, text):
     c.execute(command, params)
 
 def removeEntry(entry_id):
+    '''
+
+    '''
     command = "DELETE FROM bentries WHERE entry_id == ?"
     c.execute(command, (entry_id,))
 
