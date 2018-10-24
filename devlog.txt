@@ -18,9 +18,20 @@ Pinelogging - our blog hosting website
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-angelaT -- 2018-10-23 8:21
+mohammedU -- 2018-10-24 12:15
+--------------------------------------------------------------
+Worked on displaying blogs and entries.
+
+
+kaitlinW -- 2018-10-23 21:00
+--------------------------------------------------------------
+Found issue! Successfully fixed and functional now.
+
+
+angelaT -- 2018-10-23 20:21
 --------------------------------------------------------------
 Finished blog adding/deleting/searching. 
+
 
 kyleT -- 2018-10-23 12:40
 --------------------------------------------------------------
@@ -31,6 +42,11 @@ Bug is corrected.
 mohammedU -- 2018-10-23 12:40
 --------------------------------------------------------------
 Finished blog entries.
+
+
+kaitlinW -- 2018-10-18 12:30
+--------------------------------------------------------------
+Implement login. Enabled connection with flask website. Ran into a few issues.
 
 
 kyleT -- 2018-10-18 12:29

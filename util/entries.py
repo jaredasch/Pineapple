@@ -6,7 +6,7 @@
 import sqlite3
 
 DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE)
+db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 
 
@@ -41,4 +41,3 @@ def getBlog(entry_id):
     return blog[0]
 
 db.commit()
-db.close()

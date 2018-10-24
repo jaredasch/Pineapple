@@ -6,14 +6,14 @@
 import sqlite3
 
 DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE)
+db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 
 def addBlog(username, title, url):
-    ''' 
+    '''
     Add a new blog into the database with the params: username, title, and url.
     The blog id is unique and a number.
-    ''' 
+    '''
     maxID = c.execute("SELECT MAX(blog_id) FROM blogs").fetchone()
     blogs = c.execute("SELECT blog_id FROM blogs").fetchall()
     if len(blogs) == 0:
@@ -56,4 +56,3 @@ addBlog("Stuff", "Hunger Games", "hungergames2.html")
 print(searchBlog("Hunger Games"))
 
 db.commit()
-db.close()

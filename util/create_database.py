@@ -6,7 +6,7 @@
 import sqlite3
 
 DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE)
+db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 
 '''
@@ -23,4 +23,3 @@ command = "CREATE TABLE bentries(blog_id INTEGER, entry_id INTEGER PRIMARY KEY, 
 c.execute(command)
 
 db.commit()
-db.close()
