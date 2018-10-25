@@ -37,10 +37,20 @@ def reg():
     else:
         return render_template("landing.html", loginStatus = "Sucessfully Registered.")
 
+@app.route("/display_blog")
+def display_blog():
+    que = request.args
+    id = int(que['id'])
+    name = getBlog(id)
+    user = getAuthor(id)
+    entries = getEntries(id)
+    return render_template("blog.html", blog_title = name, author = user, entry_list = entries)
+
 @app.route("/display_entry")
 def display_entry():
     que = request.args
-    text = entries.viewEntry(que['entry_id'])
+    id = int(que['entry_id'])
+    text = entries.viewEntry(id)
     return render_template("entry.html", entry_text=text)
 
 

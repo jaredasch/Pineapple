@@ -46,6 +46,31 @@ def searchBlog(title):
             search_results += urls[x]
     return search_results
 
+def getEntries(id):
+    '''
+    Returns a list of lists with each list containing one blog id that matches given id
+    '''
+    command = "SELECT entry_id FROM bentries WHERE blog_id == ?"
+    entries = c.execute(command, (id,)).fetchall()
+    return entries
+
+def getAuthor(id):
+    '''
+    Returns author of blog associated with given blog id
+    '''
+    command = "SELECT user FROM blogs WHERE blog_id == ?"
+    author = c.execute(command, (id,)).fetchone()
+    return author[0]
+
+def getBlog(id):
+    '''
+    Returns name of blog associated with given blog id
+    '''
+    command = "SELECT blog_name FROM blogs WHERE blog_id == ?"
+    name = c.execute(command, (id,)).fetchone()
+    return name[0]
+
+
 addBlog("AT", "Blog", "blog.html")
 addBlog("Bob", "Badalog", "bob.html")
 addBlog("Bobsad", "Bsdasadalog", "bobsad.html")

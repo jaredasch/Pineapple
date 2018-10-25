@@ -1,0 +1,23 @@
+<!--
+Team Pineapple
+Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
+-->
+
+{% extends "template.html" %}
+{% block title %} {{blog_title}} {% endblock %}
+
+{% block body %}
+<h2> {{blog_title}} </h2>
+<h3> by {{author}} </h3>
+<br>
+<ul>
+{% for entry in entry_list %}
+<li>
+  {{entry[0]}}
+  <form action="/display_entry">
+    <input type="submit" name="go" value="{{entry[0]}}">
+  </form>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
