@@ -18,77 +18,10 @@ Pinelogging - our blog hosting website
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-mohammedU -- 2018-10-24 12:15
+
+angelaT -- 2018-10-15 12:01
 --------------------------------------------------------------
-Worked on displaying blogs and entries on website.
-
-
-kaitlinW -- 2018-10-23 21:00
---------------------------------------------------------------
-Found issue! Successfully fixed and functional now.
-
-
-angelaT -- 2018-10-23 20:21
---------------------------------------------------------------
-Finished blog adding/deleting/searching. 
-
-
-kyleT -- 2018-10-23 12:40
---------------------------------------------------------------
-Main bug: register and login are not complying with hmtl templates
-Bug is corrected. 
-
-
-mohammedU -- 2018-10-23 12:40
---------------------------------------------------------------
-Wrote methods to edit entries and get entry content from database.
-Added ids to indivual entries to make accessing entries easier.
-Blog entries back end should now be complete.
-
-
-mohammedU -- 2018-10-19 12:30
---------------------------------------------------------------
-Wrote methods to add and remove entries from database.
-
-
-kaitlinW -- 2018-10-18 12:30
---------------------------------------------------------------
-Implement login. Enabled connection with flask website. Ran into a few issues.
-
-
-kyleT -- 2018-10-18 12:29
---------------------------------------------------------------
-Team continued on project, still have not worked on adding/editing blog entries. Good progress!
-
-
-mohammedU, angelaT -- 2018-10-18 12:25
---------------------------------------------------------------
-Wrote register + login methods that add accounts and retrieve account information from database
-
-
-kaitlinW -- 2018-10-17 12:30
---------------------------------------------------------------
-Created templates for websites + created blocks for easier usage!
-
-
-kyleT -- 2018-10-17 12:30
---------------------------------------------------------------
-Began work on website, started creating base templates and database schema (tables).
-
-
-angelaT -- 2018-10-17 10:57
---------------------------------------------------------------
-Added the new design.pdf
-
-
-kyleT -- 2018-10-17 10:14
---------------------------------------------------------------
-The main change to our design plan will be the addition of a logout option
-
-
-kaitlinW -- 2018-10-16 20:00
---------------------------------------------------------------
-created sitemaps + connection + website designs
+Created devlog.
 
 
 kyleT -- 2018-10-16 5:39
@@ -102,8 +35,72 @@ Create a set of standards and try to adhere to them
 Create strong "snowflakes" rather than rushing and piling them in a mess (plan well ahead)
 
 
-angelaT -- 2018-10-15 12:01
+kaitlinW -- 2018-10-16 20:00
 --------------------------------------------------------------
-Created devlog.
+created sitemaps + connection + website designs
+
+
+kyleT -- 2018-10-17 10:14
+--------------------------------------------------------------
+The main change to our design plan will be the addition of a logout option (fixed the design doc)
+
+
+angelaT -- 2018-10-17 10:57
+--------------------------------------------------------------
+Added the new design.pdf
+
+
+kyleT -- 2018-10-17 12:30
+--------------------------------------------------------------
+Began work on website, started creating base templates and database schema (tables).
+
+
+kaitlinW -- 2018-10-17 12:30
+--------------------------------------------------------------
+Created templates for websites + created blocks for easier usage!
+
+
+mohammedU, angelaT -- 2018-10-18 12:25
+--------------------------------------------------------------
+Wrote register + login methods that add accounts and retrieve account information from database
+
+
+kyleT -- 2018-10-18 12:29
+--------------------------------------------------------------
+Team continued on project, still have not worked on adding/editing blog entries. Good progress!
+
+
+mohammedU -- 2018-10-19 12:30
+--------------------------------------------------------------
+Wrote methods to add and remove entries from database.
+
+
+mohammedU -- 2018-10-23 12:40
+--------------------------------------------------------------
+Wrote methods to edit entries and get entry content from database.
+Added ids to indivual entries to make accessing entries easier.
+Blog entries back end should now be complete.
+
+
+kyleT -- 2018-10-23 12:40
+--------------------------------------------------------------
+Main bug: register and login are not complying with hmtl templates
+Bug is corrected. 
+
+
+angelaT -- 2018-10-23 20:21
+--------------------------------------------------------------
+Finished blog adding/deleting/searching. 
+
+
+kaitlinW -- 2018-10-23 21:00
+--------------------------------------------------------------
+Found issue! Successfully fixed and functional now.
+
+
+mohammedU -- 2018-10-24 12:15
+--------------------------------------------------------------
+Worked on displaying blogs and entries on website.
+
 
 ==============================================================
