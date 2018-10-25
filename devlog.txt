@@ -20,7 +20,7 @@ Pinelogging - our blog hosting website
 
 mohammedU -- 2018-10-24 12:15
 --------------------------------------------------------------
-Worked on displaying blogs and entries.
+Worked on displaying blogs and entries on website.
 
 
 kaitlinW -- 2018-10-23 21:00
@@ -41,7 +41,14 @@ Bug is corrected.
 
 mohammedU -- 2018-10-23 12:40
 --------------------------------------------------------------
-Finished blog entries.
+Wrote methods to edit entries and get entry content from database.
+Added ids to indivual entries to make accessing entries easier.
+Blog entries back end should now be complete.
+
+
+mohammedU -- 2018-10-19 12:30
+--------------------------------------------------------------
+Wrote methods to add and remove entries from database.
 
 
 kaitlinW -- 2018-10-18 12:30
