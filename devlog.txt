@@ -115,4 +115,8 @@ Wrote a template html file for blogs.
 Blogs should now display entries and redirect to entries.
 
 
+angelaT -- 2018-10-26 14:28
+--------------------------------------------------------------
+Fixed to a working version.
+Can add blogs and list them out on dashboard.
 ==============================================================
