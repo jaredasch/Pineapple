@@ -94,5 +94,12 @@ def getBlog(id):
     name = c.execute(command, (id,)).fetchone()
     return name[0]
 
+def getBlogsList(gettingUser):
+    '''
+    Returns a list of blogs name assosiated with user
+    '''
+    command = "SELECT blog_name FROM blogs WHERE user == ?"
+    name = c.execute(command, (gettingUser,)).fetchall()
+    return name
 
 db.commit()

@@ -1,23 +1,20 @@
 {% extends "template.html" %}
-{% block title %} Dashboard -- YOU ARE LOGGED IN {% endblock %}
+{% block title %} Dashboard -- LOGGEDIN {% endblock %}
 {% block body %}
 <h2> Welcome Back, {{LoggedUser}}! </h2>
 <br><br>
 <h2> Here are your blogs: </h2>
 
-{{}}
+{% for blog in blogs %}
 
+  {{blog}}
+
+{% endfor %}
 
 Jinja for each blog display blog name
 make it a link
 {{myBlogs}}
 
-{% for blog in blogs %}
-
-
-
-
-{% endfor %}
 
 
 <form action="/newBlog">

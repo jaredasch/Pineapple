@@ -5,7 +5,7 @@
 
 from flask import Flask,request,render_template,session,url_for,redirect,flash
 import os
-from util import auth
+from util import auth, blogs
 import sqlite3
 
 app = Flask(__name__)
@@ -40,17 +40,21 @@ def reg():
 @app.route("/homepage")
 def homepage():
     que = request.args
-    return render_template("dash.html", LoggedUser = session['username'])
+    return render_template("dash.html", LoggedUser = session['username'], blogs = blogs.getBlogsList(session['username']))
     #Getting Which Blog as a number
-
+@app.route("/newBlog")
+def newBlog():
+    que = request.args
+    blogs.addBlog(session['username'], que['blogName'])
+    return render_template("dash.html", LoggedUser = session['username'], blogs =  blogs.getBlogsList(session['username']))
 
 @app.route("/display_blog")
 def display_blog():
     que = request.args
     id = int(que['id'])
-    name = getBlog(id)
-    user = getAuthor(id)
-    entries = getEntries(id)
+    name = blogs.getBlog(id)
+    user = blogs.getAuthor(id)
+    entries = blogs.getEntries(id)
     return render_template("blog.html", blog_title = name, author = user, entry_list = entries)
 
 @app.route("/display_entry")
