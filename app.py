@@ -15,9 +15,8 @@ app.secret_key = "supersecretkey"
 @app.route("/")
 def home():
     #If there is a session: take user to dashbaord
-    if 'user' in session: #ALREADY LOGGED IN NEVER LOGGED OUT
-        print("user in ses")
-        return redirect("dash.html")
+    if 'username' in session:
+      return redirect("/homepage")
     return render_template("landing.html")
 
 
@@ -27,7 +26,8 @@ def login():
     login = auth.login(request.args['user'],request.args['pass'])
     if (login == 0):
         return render_template("landing.html", loginStatus = "Invalid Login.")
-    return render_template("dash.html")
+    session['username'] = request.args['user']
+    return redirect('/homepage')
 
 @app.route("/register")
 def reg():
@@ -36,6 +36,13 @@ def reg():
         return render_template("landing.html", loginStatus = "Nope. Try again. Already registered")
     else:
         return render_template("landing.html", loginStatus = "Sucessfully Registered.")
+
+@app.route("/homepage")
+def homepage():
+    que = request.args
+    return render_template("dash.html", LoggedUser = session['username'])
+    #Getting Which Blog as a number
+
 
 @app.route("/display_blog")
 def display_blog():
@@ -53,6 +60,12 @@ def display_entry():
     text = entries.viewEntry(id)
     return render_template("entry.html", entry_text=text)
 
+
+
+@app.route("/logout")
+def logout():
+    session.pop('username', None)
+    return render_template("landing.html", loginStatus = "Logged Out.")
 
 if __name__ == '__main__':
     app.debug = True
