@@ -42,6 +42,7 @@ def homepage():
     que = request.args
     return render_template("dash.html", LoggedUser = session['username'], blogs = blogs.getBlogsList(session['username']))
     #Getting Which Blog as a number
+
 @app.route("/newBlog")
 def newBlog():
     que = request.args
@@ -55,14 +56,35 @@ def display_blog():
     name = blogs.getBlog(id)
     user = blogs.getAuthor(id)
     entries = blogs.getEntries(id)
-    return render_template("blog.html", blog_title = name, author = user, entry_list = entries)
+    return render_template("blog.html", blog_id = id, blog_title = name, author = user, entry_list = entries)
+
+@app.route("/new_entry")
+def add_entry():
+    que = request.args
+    id = int(que['blog_id'])
+    entries.addEntry(id,"")
+
+@app.route("/remove_entry")
+def remove_entry():
+    que = request.args
+    entry_id = int(que['entry_id'])
+    user = que['author']
+    name = que['title'] 
+    blog_id = que['blog_id']
+    remove_entry(id)
+    return render_template("blog_id", blog_id = blog_id, author = user, blog_title = name)
 
 @app.route("/display_entry")
 def display_entry():
     que = request.args
     id = int(que['entry_id'])
+    user = que['author']
+    name = que['title'] 
     text = entries.viewEntry(id)
-    return render_template("entry.html", entry_text=text)
+    return render_template("entry.html", entry_id = id, entry_text=text, blog_title = name, author = user)
+
+@app.route("/edit_entry")
+def edit_entry():
 
 
 
