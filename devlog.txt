@@ -134,4 +134,10 @@ Added editing entries.
 Added "back" buttons.
 Fixed adding/removing entries.
 Made some changes to displaying blogs/entries.
+
+
+mohammedU -- 2018-10-28 18:58
+--------------------------------------------------------------
+Added going to blog page from homepage.
+Added removing blogs from homepage.
 ==============================================================
