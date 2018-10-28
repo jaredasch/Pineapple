@@ -7,14 +7,19 @@
 
 {% for blog in blogs %}
 
-  {{blog}}
+<p>
+ 	{{blog[0]}} 
+  <form action="/display_blog">
+    <input type="hidden" name="blog_id" value={{blog[1]}}>
+	<input type="submit" name="go" value="View">
+  </form>
+  <form action="/remove_blog">
+    <input type="hidden" name="blog_id" value={{blog[1]}}>
+	<input type="submit" name="remove" value="Delete">
+  </form>
+</p>
 
 {% endfor %}
-
-Jinja for each blog display blog name
-make it a link
-{{myBlogs}}
-
 
 
 <form action="/newBlog">

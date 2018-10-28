@@ -61,6 +61,7 @@ def searchBlog(title):
             search_results += urls[x]
     return search_results
 
+"""
 addBlog("AT", "Blog")
 addBlog("Bob", "Badalog")
 addBlog("Bobsad", "Bsdasadalog")
@@ -69,6 +70,7 @@ addBlog("Boosda", "dfwaoef")
 addBlog("AT", "HungerGames")
 addBlog("Stuff", "HungerGames")
 print(searchBlog("HungerGames"))
+"""
 
 def getEntries(id):
     '''
@@ -98,7 +100,7 @@ def getBlogsList(gettingUser):
     '''
     Returns a list of blogs name assosiated with user
     '''
-    command = "SELECT blog_name FROM blogs WHERE user == ?"
+    command = "SELECT blog_name,blog_id FROM blogs WHERE user == ?"
     name = c.execute(command, (gettingUser,)).fetchall()
     return name
 

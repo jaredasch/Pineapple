@@ -52,11 +52,18 @@ def newBlog():
 @app.route("/display_blog")
 def display_blog():
     que = request.args
-    blog_id = int(que['id'])
+    blog_id = int(que['blog_id'])
     name = blogs.getBlog(blog_id)
     user = blogs.getAuthor(blog_id)
     entries = blogs.getEntries(blog_id)
     return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries)
+
+@app.route("/remove_blog")
+def remove_blog():
+    que = request.args
+    blog_id = int(que['blog_id'])
+    blogs.delBlog(blog_id)
+    return render_template("dash.html", LoggedUser = session['username'], blogs =  blogs.getBlogsList(session['username']))
 
 @app.route("/new_entry")
 def add_entry():
