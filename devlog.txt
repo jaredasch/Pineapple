@@ -119,4 +119,11 @@ angelaT -- 2018-10-26 14:28
 --------------------------------------------------------------
 Fixed to a working version.
 Can add blogs and list them out on dashboard.
+
+
+mohammedU -- 2018-10-27 16:30
+--------------------------------------------------------------
+Added displaying blogs/entries (front end).
+Added adding/removing entries (front end).
+Worked on editing entries (front end).
 ==============================================================
