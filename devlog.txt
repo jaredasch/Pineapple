@@ -126,4 +126,12 @@ mohammedU -- 2018-10-27 16:30
 Added displaying blogs/entries (front end).
 Added adding/removing entries (front end).
 Worked on editing entries (front end).
+
+
+mohammedU -- 2018-10-28 18:02
+--------------------------------------------------------------
+Added editing entries.
+Added "back" buttons.
+Fixed adding/removing entries.
+Made some changes to displaying blogs/entries.
 ==============================================================
