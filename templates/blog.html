@@ -9,6 +9,11 @@ Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
 {% block body %}
 <h2> {{blog_title}} </h2>
 <h3> by {{author}} </h3>
+
+<form action="/homepage">
+  <input type="submit" name="go" value="Back to homepage">
+</form>
+
 <br>
 <form action="/new_entry">
 	<input type="hidden" name="blog_id" value="{{blog_id}}">
@@ -18,16 +23,13 @@ Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
 {% for entry in entry_list %}
 <li>
   <form action="/display_entry">
+    <input type="hidden" name="blog_id" value="{{blog_id}}">
   	<input type="hidden" name="entry_id" value="{{entry[0]}}">
-  	<input type="hidden" name="author" value="{{author}}">
-  	<input type="hidden" name="title" value="{{blog_title}}">
     <input type="submit" name="show" value="View">
   </form>
   <form action="/remove_entry">
   	<input type="hidden" name="blog_id" value="{{blog_id}}">
   	<input type="hidden" name="entry_id" value="{{entry[0]}}">
-  	<input type="hidden" name="author" value="{{author}}">
-  	<input type="hidden" name="title" value="{{blog_title}}">
   	<input type="submit" name="remove" value="Remove">
   </form>
 </li>
