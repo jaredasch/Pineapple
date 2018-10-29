@@ -157,4 +157,10 @@ mohammedU -- 2018-10-28 22:35
 --------------------------------------------------------------
 Made entries display their content on blogpage.
 Editing entries is now easier because of a new multi-line textbox.
+
+angelaT -- 2018-10-28
+--------------------------------------------------------------
+Finished with searching for blogs by title. 
+All blogs with that title with appear below the search bar and the user can view each one.
+Users can edit their own blogs and entries, but only view other users' blogs and entries.
 ==============================================================
