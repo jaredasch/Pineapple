@@ -4,7 +4,7 @@
 #2018-10-15
 
 import sqlite3
-
+DB_FILE = "database.db"
 
 def register(username, password):
     '''
@@ -12,7 +12,6 @@ def register(username, password):
     Returns 0 if username already exists
     Returns 1 if successful
     '''
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "SELECT user FROM accts"
@@ -40,7 +39,6 @@ def login(username, password):
     Returns 0 if login failed
     Returns 1 if login is successful
     '''
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "SELECT user, password FROM accts"

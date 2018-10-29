@@ -4,7 +4,7 @@
 #2018-10-15
 
 import sqlite3
-
+DB_FILE = "database.db"
 
 
 def addBlog(username, title):
@@ -14,7 +14,6 @@ def addBlog(username, title):
     The url is the the title and the number. Ex: "hungergames1"
     ''' 
     
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     maxID = c.execute("SELECT MAX(blog_id) FROM blogs").fetchone()
@@ -36,7 +35,6 @@ def delBlog(id):
     Delete a blog from the database with the blog id as param.
     '''
     
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "DELETE FROM blogs WHERE blog_id == ?"
@@ -49,7 +47,6 @@ def searchBlog(title):
     '''
     A list of urls would be returned based on the title.
     '''
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     search_results = []
@@ -68,7 +65,6 @@ def getEntries(id):
     '''
     Returns a list of lists with each list containing one blog id that matches given id
     '''
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "SELECT entry_id FROM bentries WHERE blog_id == ?"
@@ -81,8 +77,6 @@ def getAuthor(id):
     '''
     Returns author of blog associated with given blog id
     '''
-    
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "SELECT user FROM blogs WHERE blog_id == ?"
@@ -96,8 +90,6 @@ def getBlog(id):
     '''
     Returns name of blog associated with given blog id
     '''
-
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "SELECT blog_name FROM blogs WHERE blog_id == ?"
@@ -110,7 +102,6 @@ def getBlogsList(gettingUser):
     '''
     Returns a list of blogs name assosiated with user
     '''
-    DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
     command = "SELECT blog_name,blog_id FROM blogs WHERE user == ?"
