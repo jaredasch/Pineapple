@@ -1,0 +1,19 @@
+<!--
+Team Pineapple
+Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
+-->
+
+{% extends "template.html" %}
+{% block title %} {{blog_title}} {% endblock %}
+
+{% block body %}
+<h2> {{blog_title}} </h2>
+<h3> {{author}} </h3>
+<form action="/display_blog">
+	<input type="hidden" name="blog_id" value={{blog_id}}>
+	<input type="submit" name="go" value="Return to blog">
+</form>
+<br>>
+<p> {{entry_text}} </p>
+
+{% endblock %}

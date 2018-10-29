@@ -32,8 +32,15 @@
   <input type="text" name="blog_title" placeholder="Title of the Blog">
   <input type="submit" name="searchblog" value="Search">
 </form>
-{{searchlist}}
+{% for search in searchlist%}
 
+<p>{{search}}
+<form action="/display_blog">
+  <input type="hidden" name="blog_id" value="{{search}}">
+  <input type="submit" name="searching" value="View">
+</form>
+</p>
+{% endfor %}
 <br/>
 <form action="/logout">
   <input type="submit" name="logout" value="Click here to log out">

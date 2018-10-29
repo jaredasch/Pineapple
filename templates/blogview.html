@@ -1,0 +1,31 @@
+<!--
+Team Pineapple
+Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
+-->
+
+{% extends "template.html" %}
+{% block title %} {{blog_title}} {% endblock %}
+
+{% block body %}
+<h2> {{blog_title}} </h2>
+<h3> by {{author}} </h3>
+
+<form action="/homepage">
+  <input type="submit" name="go" value="Back to homepage">
+</form>
+
+<br>
+</form>
+<ul>
+{% for entry in entry_list %}
+<li>
+  {{entry[1]}}
+  <form action="/display_entry">
+    <input type="hidden" name="blog_id" value="{{blog_id}}">
+  	<input type="hidden" name="entry_id" value="{{entry[0]}}">
+    <input type="submit" name="show" value="View">
+  </form>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

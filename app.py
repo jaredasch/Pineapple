@@ -56,8 +56,10 @@ def display_blog():
     name = blogs.getBlog(blog_id)
     user = blogs.getAuthor(blog_id)
     entries = blogs.getEntries(blog_id)
-    return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries)
-
+    if user == session['username']:
+        return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries)
+    else:
+        return render_template("blogview.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries)
 @app.route("/remove_blog")
 def remove_blog():
     que = request.args
@@ -69,8 +71,8 @@ def remove_blog():
 def search_blog():
     que = request.args
     searches = blogs.searchBlog(que["blog_title"])
-    print(searches)
-    return render_template("dash.html", LoggedUser = session['username'], blogs =  blogs.getBlogsList(session['username']), searchlist = searches)
+    bloglist = blogs.getBlogsList(session['username'])
+    return render_template("dash.html", LoggedUser = session['username'], blogs =  bloglist, searchlist = searches)
 
 @app.route("/new_entry")
 def add_entry():
@@ -101,8 +103,10 @@ def display_entry():
     name = blogs.getBlog(blog_id)
     user = blogs.getAuthor(blog_id)
     text = entries.viewEntry(entry_id)
-    return render_template("entry.html", entry_id = entry_id, blog_id = blog_id, entry_text=text, blog_title = name, author = user)
-
+    if user == session['username']:
+        return render_template("entry.html", entry_id = entry_id, blog_id = blog_id, entry_text=text, blog_title = name, author = user)
+    else:
+        return render_template("entryview.html", entry_id = entry_id, blog_id = blog_id, entry_text=text, blog_title = name, author = user)
 @app.route("/edit_mode")
 def edit_mode():
     que = request.args
