@@ -105,7 +105,7 @@ Worked on displaying blogs and entries on website.
 
 kaitlinW -- 2018-10-25 12:25
 --------------------------------------------------------------
-Finished working on session.
+Finished working on sessions.
 
 
 mohammedU -- 2018-10-25 12:37
@@ -113,6 +113,12 @@ mohammedU -- 2018-10-25 12:37
 Added methods to get blog information from database.
 Wrote a template html file for blogs.
 Blogs should now display entries and redirect to entries.
+
+
+kaitlinW -- 2018-10-26 00:15
+--------------------------------------------------------------
+Bugs encountered with adding blogs, created blog display
+created template for dash
 
 
 angelaT -- 2018-10-26 14:28
