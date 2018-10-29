@@ -1,6 +1,11 @@
 # Pinelogging - Our Very Own Blog Hosting Website!
 *This application was made in accordance with python3*
-### When using our website, please only use our buttons to avoid loading problems!
+#### When using our website, please only use our buttons to avoid loading problems!
+
+## Pre-requisites
+Python
+Flask
+Virtual Environment
 
 ## Launch Instructions:
 1. Clone this repo! 
