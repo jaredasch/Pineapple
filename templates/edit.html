@@ -18,8 +18,8 @@ Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
 <form action="/edit_entry">
 	<input type="hidden" name="blog_id" value={{blog_id}}>
 	<input type="hidden" name="entry_id" value="{{entry_id}}">
-	<input type="text" rows="5" cols="50" name="content" value="{{entry_text}}">
-	<input type="submit" name="new" value="Save">
+	<textarea rows="15" cols="80" name="content">{{entry_text}}</textarea>
+	<p><input type="submit" name="new" value="Save"></p>
 </form>
 
 <form action="/display_entry">
