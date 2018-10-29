@@ -12,13 +12,13 @@ Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
 <br>
 
 <h4>Old Content:</h4>
-<p>{{text}}</p>
+<p>{{entry_text}}</p>
 
 <h4>Edit:</h4>
 <form action="/edit_entry">
 	<input type="hidden" name="blog_id" value={{blog_id}}>
 	<input type="hidden" name="entry_id" value="{{entry_id}}">
-	<input type="text" name="content" value="{{text}}">
+	<input type="text" rows="5" cols="50" name="content" value="{{entry_text}}">
 	<input type="submit" name="new" value="Save">
 </form>
 

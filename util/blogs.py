@@ -71,7 +71,7 @@ def getEntries(id):
     DB_FILE = "database.db"
     db = sqlite3.connect(DB_FILE, check_same_thread=False)
     c = db.cursor()
-    command = "SELECT entry_id FROM bentries WHERE blog_id == ?"
+    command = "SELECT entry_id,blog_entry FROM bentries WHERE blog_id == ?"
     entries = c.execute(command, (id,)).fetchall()
     db.commit()
     db.close()

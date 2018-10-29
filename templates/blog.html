@@ -22,6 +22,7 @@ Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
 <ul>
 {% for entry in entry_list %}
 <li>
+  {{entry[1]}}
   <form action="/display_entry">
     <input type="hidden" name="blog_id" value="{{blog_id}}">
   	<input type="hidden" name="entry_id" value="{{entry[0]}}">
