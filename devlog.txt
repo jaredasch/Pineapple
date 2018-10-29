@@ -141,6 +141,10 @@ mohammedU -- 2018-10-28 18:58
 Added going to blog page from homepage.
 Added removing blogs from homepage.
 
+angelaT -- 2018-10-28 19:30
+--------------------------------------------------------------
+Fixed adding/editing entries error.
+Fixed recursive use of cursor error.
 
 mohammedU -- 2018-10-28 20:48
 --------------------------------------------------------------
