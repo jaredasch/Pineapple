@@ -5,7 +5,7 @@
 
 from flask import Flask,request,render_template,session,url_for,redirect,flash
 import os
-from util import auth, blogs
+from util import auth, blogs, entries
 import sqlite3
 
 app = Flask(__name__)
@@ -72,8 +72,8 @@ def add_entry():
     name = blogs.getBlog(blog_id)
     user = blogs.getAuthor(blog_id)    
     entries.addEntry(blog_id,"")
-    entries = blogs.getEntries(blog_id)
-    return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries)
+    entries_list = blogs.getEntries(blog_id)
+    return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries_list)
 
 @app.route("/remove_entry")
 def remove_entry():
@@ -83,8 +83,8 @@ def remove_entry():
     name = blogs.getBlog(blog_id)
     user = blogs.getAuthor(blog_id)
     entries.removeEntry(entry_id)
-    entries = blogs.getEntries(blog_id)
-    return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries)
+    entries_list = blogs.getEntries(blog_id)
+    return render_template("blog.html", blog_id = blog_id, blog_title = name, author = user, entry_list = entries_list)
 
 @app.route("/display_entry")
 def display_entry():
@@ -102,7 +102,7 @@ def edit_mode():
     entry_id = int(que['entry_id'])
     blog_id = int(que['blog_id'])
     name = blogs.getBlog(blog_id)
-    user = blogs.getAuthor(blog_id)
+    user = blogs.getAuthor(blog_id)  
     text = entries.viewEntry(entry_id)
     return render_template("edit.html", blog_id = blog_id, entry_id = entry_id, entry_text=text, blog_title = name, author = user)
 

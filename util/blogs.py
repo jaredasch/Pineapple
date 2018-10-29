@@ -9,17 +9,6 @@ DB_FILE = "database.db"
 db = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = db.cursor()
 
-#Pineapple -- Kyle Tau, Angela Tom, Mohammed Uddin, Kaitlin Wan
-#SoftDev1 pd6
-#P00 -- Da Art of Storytellin'(Part X)
-#2018-10-15
-
-import sqlite3
-
-DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE, check_same_thread=False)
-c = db.cursor()
-
 
 def addBlog(username, title):
     ''' 
@@ -60,17 +49,6 @@ def searchBlog(title):
         if titles[x][0] == title:
             search_results += urls[x]
     return search_results
-
-"""
-addBlog("AT", "Blog")
-addBlog("Bob", "Badalog")
-addBlog("Bobsad", "Bsdasadalog")
-delBlog(1)
-addBlog("Boosda", "dfwaoef")
-addBlog("AT", "HungerGames")
-addBlog("Stuff", "HungerGames")
-print(searchBlog("HungerGames"))
-"""
 
 def getEntries(id):
     '''
