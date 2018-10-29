@@ -13,7 +13,7 @@ git clone <HTTPS or SSH link of this repo>
 ```
 3. Create the database!
 ```
-(venv) ~/<path-to-this-repo>/Pineapple/util$ python create_database.py
+(venv) ~/<path-to-this-repo>/Pineapple$ python util/create_database.py
 ```
 4. Run our app
 ```
