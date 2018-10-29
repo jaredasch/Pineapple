@@ -5,9 +5,6 @@
 
 import sqlite3
 
-DB_FILE = "database.db"
-db = sqlite3.connect(DB_FILE, check_same_thread=False)
-c = db.cursor()
 
 def register(username, password):
     '''
@@ -15,8 +12,13 @@ def register(username, password):
     Returns 0 if username already exists
     Returns 1 if successful
     '''
+    DB_FILE = "database.db"
+    db = sqlite3.connect(DB_FILE, check_same_thread=False)
+    c = db.cursor()
     command = "SELECT user FROM accts"
     users = c.execute(command).fetchall()
+    db.commit()
+    db.close()
     if username in users:
         return 0
     else:
@@ -34,8 +36,13 @@ def login(username, password):
     Returns 0 if login failed
     Returns 1 if login is successful
     '''
+    DB_FILE = "database.db"
+    db = sqlite3.connect(DB_FILE, check_same_thread=False)
+    c = db.cursor()
     command = "SELECT user, password FROM accts"
     accts = c.execute(command).fetchall()
+    db.commit()
+    db.close()
     login = {}
     for acct in accts:
         login[acct[0]] = acct[1]
@@ -46,4 +53,3 @@ def login(username, password):
             return 0
     return 0
 
-db.commit()
