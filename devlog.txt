@@ -140,4 +140,9 @@ mohammedU -- 2018-10-28 18:58
 --------------------------------------------------------------
 Added going to blog page from homepage.
 Added removing blogs from homepage.
+
+
+mohammedU -- 2018-10-28 20:48
+--------------------------------------------------------------
+Fixed locked out of database error.
 ==============================================================
