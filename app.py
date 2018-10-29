@@ -65,6 +65,13 @@ def remove_blog():
     blogs.delBlog(blog_id)
     return render_template("dash.html", LoggedUser = session['username'], blogs =  blogs.getBlogsList(session['username']))
 
+@app.route("/search_blog")
+def search_blog():
+    que = request.args
+    searches = blogs.searchBlog(que["blog_title"])
+    print(searches)
+    return render_template("dash.html", LoggedUser = session['username'], blogs =  blogs.getBlogsList(session['username']), searchlist = searches)
+
 @app.route("/new_entry")
 def add_entry():
     que = request.args

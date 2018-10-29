@@ -2,7 +2,7 @@
 {% block title %} Dashboard -- LOGGEDIN {% endblock %}
 {% block body %}
 <h2> Welcome Back, {{LoggedUser}}! </h2>
-<br><br>
+<br>
 <h2> Here are your blogs: </h2>
 
 {% for blog in blogs %}
@@ -27,12 +27,14 @@
   <input type="submit" name="createblog" value="Create">
 </form>
 
+<h2>Search For A Blog</h2>
+<form action="/search_blog">
+  <input type="text" name="blog_title" placeholder="Title of the Blog">
+  <input type="submit" name="searchblog" value="Search">
+</form>
+{{searchlist}}
 
-
-SELECT A BLOG OR ADD NEW BLOG:
-What should be here: add blog button, del blog button, search bar + submit button,
-
-
+<br/>
 <form action="/logout">
   <input type="submit" name="logout" value="Click here to log out">
 </form>
