@@ -17,9 +17,9 @@ def register(username, password):
     c = db.cursor()
     command = "SELECT user FROM accts"
     users = c.execute(command).fetchall()
-    db.commit()
-    db.close()
     if username in users:
+        db.commit()
+        db.close()
         return 0
     else:
         try:
@@ -28,7 +28,11 @@ def register(username, password):
             c.execute(command, params)
         except:
             #If it is already registered
+            db.commit()
+            db.close()
             return 0
+    db.commit()
+    db.close()
     return 1
 
 def login(username, password):
