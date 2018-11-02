@@ -1,9 +1,63 @@
 body {
-    background-color: powderblue;
+    background-color: #6dadb5;
 }
-h1 {
-    color: blue;
+h1, h2, h3, h4 {
+    font-family: 'Helvetica';
+    color: white;
+    font-weight: 100;
 }
+
 p {
     color: red;
+}
+
+form {
+    margin: 50px auto;
+    width: 50%;
+    background-color: #fff;
+    padding: 20px
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px auto 10px auto;
+    font-family: 'Helvetica', Arial, sans-serif;
+    border-width: 0 0 1px 0
+}
+
+form input:focus {
+    outline: none;
+    border-color: #ccc
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px auto 10px auto;
+    background-color: #6dadb5;
+    border: 1px solid #6dadb5;
+    color: white;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    font-family: 'Helvetica', Arial, sans-serif
+}
+
+form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #6dadb5;
+}
+
+form textarea {
+    resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+}
+
+form textarea:focus {
+    outline: none;
 }
